@@ -1,0 +1,29 @@
+[user]
+	name = Jessie Burger
+	email = jessie.burger@gmail.com
+[alias]
+        st = status
+        ci = commit
+        co = checkout
+  		br = branch
+  		up = push
+[credential]
+	helper = osxkeychain
+[core]
+	editor = emacs
+	autocrlf = input
+	safecrlf = true
+[merge]
+	tool = opendiff
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+	ui = true
+[push]
+	default = simple
+[rerere]
+	enabled = true
+[branch]
+	autosetuprebase = always

@@ -7,11 +7,11 @@ ln -sf ${curr_dir}/gitconfig ~/.gitconfig
 ln -sf ${curr_dir}/gitignore ~/.gitignore
 
 echo "Installing homebrew"
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update && brew doctor
 
-echo "Installing emacs"
-brew install emacs
+# echo "Installing emacs"
+# brew install emacs
 
 echo "Installing git"
 brew install git

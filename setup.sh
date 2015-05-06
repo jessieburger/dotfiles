@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 rm -rf ~/.antigen ~/.emacs.d ~/.oh-my-zsh ~/.zshrc
 curr_dir=$(cd `dirname $0` && pwd)
+
+echo "Configuring zsh"
+chsh -s /bin/zsh
+curl -L http://install.ohmyz.sh | sh
 ln -sf ${curr_dir}/antigen ~/.antigen
 ln -sf ${curr_dir}/zshrc ~/.zshrc
-ln -sf ${curr_dir}/gitconfig ~/.gitconfig
-ln -sf ${curr_dir}/gitignore ~/.gitignore
+mkdir ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/custom/themes/
+ln -sf ${curr_dir}/jessie.zsh-theme ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/custom/themes/
 
 echo "Installing homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -16,6 +20,8 @@ brew update && brew doctor
 echo "Installing git"
 brew install git
 brew install git-flow
+ln -sf ${curr_dir}/gitconfig ~/.gitconfig
+ln -sf ${curr_dir}/gitignore ~/.gitignore
 
 # echo "Installing build tools"
 # brew install ant
@@ -33,10 +39,6 @@ brew install git-flow
 
 # echo "Installing mongo"
 # brew install mongodb
-
-echo "Configuring zsh"
-chsh -s /bin/zsh
-curl -L http://install.ohmyz.sh | sh
 
 echo "Installing python"
 brew install python

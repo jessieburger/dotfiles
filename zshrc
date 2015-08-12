@@ -69,26 +69,21 @@ git-flow
 # homebrew support
 brew
 
-# pip support
-pip
-
 # rsync support
 rsync
 
 # cp support
 cp
 
-# python support
-python
+# clojure support
+# lein
 
-# scala support
-scala
+# python support
+pip
+python
 
 # maven support
 # mvn
-
-# sbt support
-# sbt
 
 # docker support
 # docker
@@ -110,7 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # Homebrew installs to /usr/local/bin
 # Put /usr/local/bin after /usr/bin on the path to prevent conflicts between native and custom installs
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 # export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)
 # export PATH=$PATH:$JAVA_HOME/bin
 # export MANPATH="/usr/local/man:$MANPATH"

@@ -7,8 +7,8 @@ chsh -s /bin/zsh
 # curl -L http://install.ohmyz.sh | sh
 ln -sf ${curr_dir}/antigen ~/.antigen
 ln -sf ${curr_dir}/zshrc ~/.zshrc
-mkdir ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/custom/themes/
-ln -sf ${curr_dir}/jessie.zsh-theme ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh.git/custom/themes/
+mkdir ${ZSH}/custom/themes
+ln -sf ${curr_dir}/jessie.zsh-theme ${ZSH}/custom/themes/
 
 echo "Installing homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -26,7 +26,6 @@ ln -sf ${curr_dir}/gitignore ~/.gitignore
 # echo "Installing build tools"
 # brew install ant
 # brew install maven
-# brew install leiningen
 
 # echo "Installing aws client"
 # brew install awscli

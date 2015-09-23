@@ -75,9 +75,6 @@ rsync
 # cp support
 cp
 
-# clojure support
-# lein
-
 # python support
 pip
 python
@@ -89,7 +86,7 @@ python
 # docker
 
 # AWS command support
-aws
+# aws
 
 # redis client support
 # redis-cli
